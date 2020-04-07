@@ -5,7 +5,6 @@ import logging
 import json
 
 app = Flask(__name__)
-TOKEN = "Njk0NDcxMTUyMTg1MTE0NjI0.XoMHAA.NSwRs6ZXy3dKk8Uu--EhyHJvV58"
 URL = "https://translate.yandex.net/api/v1.5/tr.json/translate"
 KEY = "trnsl.1.1.20200330T194901Z.c645c08a6c640f8c.29741f50bd6d553614ecc9705ac6efbf3e6e5fff"
 
