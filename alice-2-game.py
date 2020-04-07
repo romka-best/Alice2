@@ -58,9 +58,20 @@ def handle_dialog(res, req):
                 {
                     'title': 'Нет',
                     'hide': True
+                },
+                {
+                    'title': "Помощь",
+                    'hide': False
                 }
             ]
     else:
+        if 'помощь' in req['request']['nlu']['tokens']:
+            res['response']['text'] = 'Справка:\n' \
+                                      '1. Я присылаю вам фото города' \
+                                      '2. Вы должны угадать его' \
+                                      '3. Сказать его мне' \
+                                      '4. Угадываете - молодец. Нет - я помогу'
+            return
         if not sessionStorage[user_id]['game_started']:
             if 'да' in req['request']['nlu']['tokens']:
                 if len(sessionStorage[user_id]['guessed_cities']) == 3:
