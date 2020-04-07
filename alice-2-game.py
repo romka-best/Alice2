@@ -110,7 +110,7 @@ def play_game(res, req):
         while city in sessionStorage[user_id]['guessed_cities']:
             city = random.choice(list(cities))
         sessionStorage[user_id]['city'] = city
-        sessionStorage[user_id]['country'] = get_geo_info("city", "country")
+        sessionStorage[user_id]['country'] = get_geo_info(city, "country")
         res['response']['card'] = {}
         res['response']['card']['type'] = 'BigImage'
         res['response']['card']['title'] = 'Что это за город?'
