@@ -1,1 +1,1 @@
-web: python alice_translate.py
+web: python alice-2-game.py
