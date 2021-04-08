@@ -116,6 +116,8 @@ def play_game(res, req):
         res['response']['card']['type'] = 'BigImage'
         res['response']['card']['title'] = 'Что это за город?'
         res['response']['card']['image_id'] = cities[city][attempt - 1]
+        res['response'][
+            'tts'] = '<speaker audio="dialogs-upload/68b7790c-c028-4717-9c4b-0a5a88b4ec91/74290c64-3094-4029-a02c-4880618e11f9.opus">'
         res['response']['text'] = 'Тогда сыграем!'
     else:
         if not sessionStorage[user_id]['guess_city']:
